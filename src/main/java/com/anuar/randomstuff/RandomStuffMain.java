@@ -1,5 +1,6 @@
 package com.anuar.randomstuff;
 
+import com.anuar.randomstuff.common.items.Food;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -65,6 +66,8 @@ public class RandomStuffMain
     public RandomStuffMain()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        Food.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
