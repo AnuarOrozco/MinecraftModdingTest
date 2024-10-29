@@ -15,6 +15,9 @@ public class Food {
     public static final RegistryObject<Item> TACO = ITEMS.register("taco",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(0.6F).build())));
 
+    public static final RegistryObject<Item> BURRITO_SUPREMO = ITEMS.register("burrito_supremo",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(8).saturationMod(1.2F).build())));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
